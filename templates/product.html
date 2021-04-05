@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {{= it.include("head.html", {title: it.document.title, path: it.document.path, description: it.document.description}) }}
+
+</head>
+<body>
+
+{{= it.include("header.html", {path: it.document.path} ) }}
+
+<div class="pageContent">
+
+    {{= it.include("product/sections/topSec.html", {
+                                                        pdfName: it.document.pdfName,
+                                                        title: it.document.pageTitle,
+                                                        prodName: it.document.prodName,
+                                                        imgSrc: it.document.imgSrc,
+                                                        imgAlt: it.document.imgAlt,
+                                                        imgTitle: it.document.imgTitle,
+                                                        bullPoints: it.document.bullPoints,
+                                                        pileHeight: it.document.pileHeight,
+                                                        stitchDensity: it.document.stitchDensity
+                                                        }) }}
+
+    <hr>
+
+    {{= it.include("product/sections/description.html", {
+                                                            exImgSrc: it.document.exImgSrc,
+                                                            exImgAlt: it.document.exImgAlt,
+                                                            exImgTitle: it.document.exImgTitle,
+                                                            prodName: it.document.prodName,
+                                                            forChild: it.document.forChild,
+                                                            forPets: it.document.forPets,
+                                                            forPrice: it.document.forPrice,
+                                                            forEco: it.document.forEco,
+                                                            prodDescP1: it.document.prodDescP1,
+                                                            prodDescP2: it.document.prodDescP2
+                                                            } )
+                                                            }}
+
+    <hr>
+
+
+    {{= it.include("services.html") }}
+
+</div>
+
+    {{= it.include("footer.html") }}
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8">
+
+    <base href="{{= it.baseURL}}">
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+
+    <meta name="description" content="{{= it.description }}">
+
+    <title>{{= it.title }}</title>
+
+    <link rel="canonical" href="{{= it.baseURL}}{{? it.path }}/{{= it.path }}{{?}}">
+
+    <link href="./images/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script>
+        function toggleMenu(elId){
+            let _el = document.getElementById(elId);
+            _el.style.display = _el.style.display === 'none' ? 'grid' : 'none';
+        }
+    </script>
+</head>

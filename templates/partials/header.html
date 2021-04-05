@@ -1,0 +1,24 @@
+<header class="page">
+    <div class="inner">
+        <div class="topRow">
+            <div class="logo">
+                <a href="index.html" title="">
+                    <img src="./images/logo/logo.jpg" alt="" title="Sanity">
+                </a>
+            </div>
+            <div class="tel">
+                <a href="tel:123456789"><i class="ic phone"><span class="hideMb"> 123456789</span><span class="hideTab hideDt">Tap to Call</span></i></a>
+            </div>
+            <div class="ham" id="hamMenu">
+                {{? it.path !== ""}}
+                <i class="hamMenu" style="cursor: pointer;" onclick="toggleMenu('pMenu')"></i>
+                {{?}}
+            </div>
+        </div>
+            <div class="mbBanner">
+
+                {{= it.include("panelMenu.html", {path: it.path}) }}
+
+            </div>
+    </div>
+</header>

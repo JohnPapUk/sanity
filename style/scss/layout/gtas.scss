@@ -1,0 +1,33 @@
+@import "constants";
+
+div{
+  &.gta-3-12{
+    display:grid;
+    grid-gap:16px;
+    grid-template-areas:  "leftCol leftCol"
+                          "rightTop rightTop"
+                          "rightBtm rightBtm";
+    div:first-child{
+      grid-area: leftCol;
+    }
+    div:nth-child(2){
+      grid-area: rightTop;
+    }
+    div:nth-child(3){
+      grid-area: rightBtm;
+    }
+  }
+  @media (min-width: $small) {
+    &.gta-3-12{
+      grid-template-areas:  "leftCol rightTop"
+                          "leftCol rightTop"
+                          "rightBtm rightBtm";
+    }
+  }
+  @media (min-width: $bp1280) {
+    &.gta-3-12{
+      grid-template-areas: "leftCol rightTop"
+                         "leftCol rightBtm";
+    }
+  }
+}

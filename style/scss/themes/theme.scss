@@ -1,0 +1,218 @@
+@import 'light/constants';
+@import '../layout/constants';
+@import 'default/icons';
+@import 'colours.scss';
+
+
+header.page {
+  background-color: $mainPageTheme;
+  color: $pageHeaderColour;
+  .inner{
+    .topRow{
+      .tel{
+        a{
+          text-decoration: none;
+          font-size:2rem;
+          color: $pageHeaderColour;
+        }
+      }
+    }
+    .panelMenu{
+      .panel{
+        border: none;
+        header{
+          background-color: $panelMenuHeaderBg;
+          a{
+            text-decoration: none;
+            color: #eee;
+            transition: border-bottom  1s;
+          }
+        }
+        div.body{
+          background-color: #f6f6f6;
+        }
+        footer{
+          background-color: #4e4e4e;
+          color:#ddd;
+        }
+      }
+    }
+  }
+  h3{
+    font-weight: 300;
+  }
+}
+
+// Border for the page if i want it need to delete at the end
+
+//div.pageContent{
+//  border:1px solid #aaa;
+//  border-top: none; border-bottom:none;
+//}
+
+footer.page{
+  background-color: $pageFooterBg;
+  color: $pageFooterColor;
+}
+
+// Panels
+.panel{
+  header{
+    h2.shad, h3.shad{
+      text-shadow: -1px 1px #000;
+    }
+
+  }
+}
+// The next panel has no border inside its the only one
+
+.panel.nBrd{
+  header{
+    border: 3px solid $clrL2;
+    border-bottom: none;
+    background-color: $clrL5;
+    color: $pnlLtGreyHeaderColour;
+  }
+  div.body{
+    border: 3px solid $clrL2;
+    border-top: none;
+    border-bottom: none;
+    background-color: $clrL5;
+    color: $pnlLtGreyBodyColour;
+  }
+  footer{
+    border: 3px solid $clrL2;
+    border-top:none;
+    background-color: $clrL5;
+    color:$pnlLtGreyHeaderColour
+  }
+}
+
+.panel.ltGrey{
+  header{
+    border: 1px solid $panelBrdDefault;
+    background-color: $pnlLtGreyHeaderBg;
+    color: $pnlLtGreyHeaderColour;
+  }
+  div.body{
+    border: 1px solid $panelBrdDefault;
+    border-top: none;
+    background-color: $pnlLtGreyBodyBg;
+    color: $pnlLtGreyBodyColour;
+  }
+  footer{
+    border: 1px solid $panelBrdDefault;
+    border-top:none;
+    background-color: $pnlLtGreyFooterBg;
+    color:$pnlLtGreyFooterColour !important;
+  }
+}
+
+.panel.green{
+  header{
+    border: 1px solid $panelBrdDefault;
+    background-color: #28b482;
+    color: #eee;
+  }
+  div.body{
+    border: 1px solid $panelBrdDefault;
+    border-top: none;
+    background-color: $pnlLtGreyBodyBg;
+    color: $pnlLtGreyBodyColour;
+  }
+  footer{
+    border: 1px solid $panelBrdDefault;
+    border-top:none;
+    background-color: $pnlLtGreyFooterBg;
+    color:$pnlLtGreyFooterColour !important;
+  }
+}
+
+.panel.error{
+  header{
+    border: 1px solid $panelBrdDefault;
+    background-color: darkred;
+    color: #eee;
+  }
+  div.body{
+    border: 1px solid $panelBrdDefault;
+    border-top: none;
+    background-color: $pnlLtGreyBodyBg;
+    color: red;
+  }
+  footer{
+    border: 1px solid $panelBrdDefault;
+    border-top:none;
+    background-color: $pnlLtGreyFooterBg;
+    color:$pnlLtGreyFooterColour !important;
+  }
+}
+.panel.prodOptions{
+  width:300px;
+  margin:0 auto;
+
+  header{
+    border: 1px solid $panelBrdDefault;
+    background-color: #0c8071;
+    color:#fff
+  }
+  div.body{
+    border: 1px solid $panelBrdDefault;
+    border-top: none;
+    background-color: $pnlLtGreyBodyBg;
+    color: $pnlLtGreyBodyColour;
+  }
+  footer{
+    border: 1px solid $panelBrdDefault;
+    border-top:none;
+    //background-color: $pnlLtGreyFooterBg;
+    color:$pnlLtGreyFooterColour !important;
+  }
+}
+
+// Tablet's
+@media (min-width: $bp834) {
+  .panelMenu {
+    .panel {
+      border:1px solid $panelBrdDefault;
+    }
+  }
+
+}
+
+// Common.
+.ul-blue{
+  display:inline-block !important;
+  border-bottom:2px solid #2376d2;
+  display:inline-block
+}
+
+.infoBar{
+  padding: 8px 8px 8px 12px;
+  background-color: $secondPageThem;
+  border: 1px solid #ebebeb;
+  border-left: 4px solid #FFF09329;
+}
+
+// Misc
+img.enhanced{
+  border: 1px solid #888;
+  border-radius:5px;
+  box-shadow: #444 -1px 28px 28px -14px;
+  -webkit-box-shadow: #444 -1px 28px 28px -14px;
+  margin-bottom:22px !important;
+}
+
+img.enhancedHover{
+  border: 1px solid #888;
+  border-radius:5px;
+  box-shadow: #444 -1px 28px 28px -14px;
+  -webkit-box-shadow: #444 -1px 28px 28px -14px;
+  margin-bottom:22px !important;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+a:hover > .enhancedHover {
+  opacity: 0.6;
+}

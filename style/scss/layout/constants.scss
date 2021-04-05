@@ -1,0 +1,27 @@
+//Break Points
+$bp420: 420px;
+$small: 660px;
+$bp834: 834px;
+$bp1024: 1024px;
+$bp1280: 1280px;
+
+// Layout
+$gridGap: 16px;
+
+// Page Content.
+$pageContentWidth: 1240px;
+
+// Header
+$headerContentOverhang: 100px;
+$headerInnerWidth: $pageContentWidth + (2 * $headerContentOverhang);
+
+// Header Top Row
+$headerTopRowHeight: 64px;
+
+// Logo.
+$logoContainerWidth: 200px;
+
+
+// Footer
+$pageFooterHeight: 40px;
+

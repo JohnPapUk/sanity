@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{{= it.include("head.html", {title: it.document.title, path: it.document.path, description: it.document.description}) }}
+<body>
+
+{{= it.include("header.html", {path: it.document.path} ) }}
+
+<div>
+    <div  class="pageContent">
+        {{= it.document }}
+    </div>
+</div>
+
+{{= it.include("footer.html")}}
+
+</body>
+</html>

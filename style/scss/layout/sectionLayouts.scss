@@ -1,0 +1,115 @@
+@import 'constants';
+
+section{
+  padding:16px 0;
+}
+
+section , .dGrid{
+  grid-gap: 24px;
+
+  &.r1c2-11 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &.r1c2-24 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &.r1c2-42 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &.r1c3-444 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &.r1c3-121 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &.r1c4-3333 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  &.r1c5-11111{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  &.r2c1c4-1-333{
+    & > div:nth-child(2){
+      display: grid;
+      grid-gap: 24px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: $small) {
+    &.r1c2-11 {
+      grid-template-columns: 1fr 1fr;
+    }
+    &.r1c2-24 {
+      grid-template-columns: 2fr 4fr;
+    }
+    &.r1c2-42 {
+      grid-template-columns: 4fr 2fr;
+    }
+    &.r1c3-444 {
+      &.tablet{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "topLeft topRight"
+                              "btmRow btmRow";
+        div:first-child{
+          grid-area: topLeft;
+        }
+        div:nth-child(2){
+          grid-area: topRight;
+        }
+        div:nth-child(3){
+          grid-area: btmRow;
+        }
+      }
+    }
+    &.r1c3-121 {
+      grid-template-columns: 1fr;
+    }
+    &.r1c4-3333 {
+      grid-template-columns: 6fr 6fr;
+    }
+    &.r1c5-11111{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+    }
+
+  }
+  @media (min-width: $bp1280) {
+    &.r1c2-24 {
+      grid-template-columns: 2fr 4fr;
+    }
+    &.r1c2-42 {
+      grid-template-columns: 4fr 2fr;
+    }
+    &.r1c3-444 {
+      grid-template-columns: 1fr 1fr 1fr;
+      &.tablet{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "topLeft topRight btmRow";
+      }
+    }
+    &.r1c3-121 {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    &.r1c4-3333 {
+      grid-template-columns: 3fr 3fr 3fr 3fr;
+    }
+    &.r2c1c4-1-333{
+      & > div:nth-child(2){
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="sanity-01">
+    <serverData>
+      <paths name="sanity-01">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/sites/dabnis.net" local="$PROJECT_DIR$/dist" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

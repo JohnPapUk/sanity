@@ -1,0 +1,25 @@
+<section class="{{? it.exImgSrc}} r1c2-42 {{?}}">
+    <div class="description">
+        <h2 class="ic acc">{{= it.prodName }}</h2>
+
+        {{= it.prodDescP1 }}
+
+        {{? it.forChild || it.forPets || it.forPrice || it.forEco}}
+            <div class="dGrid r1c2-11">
+                {{? it.forChild }}<span class="infoBar ac ic child">Safe for children to play</span>{{?}}
+                {{? it.forPets }}<span class="infoBar ac ic pawPrint">Safe for your pets</span>{{?}}
+                {{? it.forPrice }}<span class="infoBar ac ic pound">Best Value</span>{{?}}
+                {{? it.forEco }}<span class="infoBar ac ic recycle">Recyclable / Eco Product</span>{{?}}
+            </div>
+        {{?}}
+
+        {{= it.prodDescP2 || '' }}
+
+    </div>
+    {{? it.exImgSrc}}
+        <div>
+            <h2>Example</h2>
+            <img src="./images/{{= it.exImgSrc }}" alt="{{= it.exImgAlt }}" title="{{= it.exImgTitle }}" style="max-width:570px; margin:0 auto; border:1px solid #7a7a7a">
+        </div>
+    {{?}}
+</section>

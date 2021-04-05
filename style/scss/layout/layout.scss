@@ -1,0 +1,290 @@
+@import 'constants';
+
+.hide{
+  display:none !important;
+}
+
+.hideMb{
+  display:none !important;
+}
+
+header.page, footer.page {
+  width: 100%;
+}
+
+header.page{
+  .inner{
+    width: 100%;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-rows: auto auto;
+
+    .topRow{
+      margin-top:2vh;
+      display: grid;
+      grid-gap: 8px;
+      grid-template-rows: auto auto;
+      grid-template-columns:auto auto;
+      grid-template-areas: "logo ham"
+                            "sample cart";
+      .logo{
+        grid-area: logo;
+        img{
+          width:70%;
+          max-height:$headerTopRowHeight;
+          margin:4px 0 0 50px;
+        }
+      }
+      .tel{
+        grid-area: tel;
+        a > i{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+      }
+      .cmdBar{
+        grid-area: cmdBar;
+      }
+      .ham{
+        grid-area: ham;
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+    .panelMenu {
+      height:69vh;
+      width: 70%;
+      margin: 3vh auto 8vh auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      header{
+        padding: 12px;
+        a{
+          display:flex;
+          align-items: center;
+        }
+        span{
+          width:100%;
+          display:grid;
+          grid-template-columns: auto 30px;
+        }
+      }
+      div.content, footer{
+        display:none;
+      }
+    }
+  }
+}
+div.pageContent{
+  padding:8px 12px $pageFooterHeight+16px 8px;
+}
+footer.page{
+  width: 100%;
+  height:$pageFooterHeight;
+  display: block;
+  position: fixed;
+  bottom: 0;
+    .content {
+      width: 50%;
+      float: right;
+    }
+}
+
+// Tablet's
+@media (min-width: $small) {
+  .hideMb{display:block !important;}
+  .hideTab{display:none !important;}
+
+  div.pageContent {
+    padding:16px 16px $pageFooterHeight+16px 16px;
+  }
+
+  header.page{
+    .inner {
+      .topRow{
+        margin-top:8px;
+        grid-template-columns:auto auto auto 100px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo sample cart ham"
+                             "tel tel tel tel";
+        .logo{
+          grid-area: logo;
+          img{
+            width:50%;
+            margin:0 auto;
+          }
+        }
+
+      }
+
+      .panelMenu {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        height:auto;
+        width: 100%;
+        margin: 0 auto 8px auto;
+        header{
+          padding:8px 12px;
+        }
+        div.content, footer{
+          display:none;
+        }
+      }
+    }
+  }
+
+}
+
+// Desktop's up to 1980px
+@media (min-width: $bp1280) {
+
+  .hideTab{display:inline-block !important;}
+  .hideDt{display:none !important;}
+
+  div.pageContent {
+    width: $pageContentWidth;
+    margin: 0 auto;
+    padding:16px 12px $pageFooterHeight+16px 12px;
+  }
+
+  header.page {
+    height:auto;
+    padding: 8px 0 16px 0;
+    .inner {
+      width:100%;
+      max-width: $headerInnerWidth;
+      margin: 0 auto;
+      // Two row grid:
+      grid-gap: 8px;
+      grid-template-rows: $headerTopRowHeight auto;
+
+      .topRow { // Logo & tel num
+        margin-top:2px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: $logoContainerWidth auto 150px 150px 100px;
+        grid-template-areas: "logo logo logo tel tel tel tel sampBag sampBag cart cart ham";
+
+        .logo{
+          img{
+            width:60%;
+            padding:4px 0;
+            margin: 0;
+          }
+        }
+
+        div:nth-child(2){
+          display:flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+
+        div:nth-child(3){
+          display:flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+
+      .panelMenu {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(5, 1fr);
+        div.content, footer{
+          display:block;
+        }
+      }
+    }
+  }
+
+}
+
+// Large TV's
+
+// Common to all displays
+.content { // Provides inner spacing to any element holding content.
+  padding: 8px;
+}
+ul li{
+  margin-bottom:8px;
+}
+img{
+  width:100%;
+}
+
+.imgPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flxVCentre { // Vertically aligns child items to centre of parent (height)
+  display: flex !important;
+  align-items: center;
+}
+
+//.productOptions {
+//  display: flex;
+//  justify-content: space-around;
+//}
+
+section{
+  &.imgContFlt, div.panel > div.content.imgContFlt{
+
+    div.title{
+      margin:0 0 8px 0;
+    }
+    img{
+      width:100%;
+      margin: 0 auto 8px auto;
+    }
+    @media (min-width: $small) {
+      img{
+        float:left;
+        margin-right:16px;
+      }
+    }
+    &::after{
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}
+
+section{
+  &.imgContFrt, div.panel > div.content.imgContFrt{
+
+    div.title{
+      margin:0 0 8px 0;
+    }
+    img{
+      width:100%;
+      margin: 0 auto 8px auto;
+    }
+    @media (min-width: $small) {
+      img{
+        float:right;
+        margin-left:16px;
+      }
+    }
+    &::after{
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}
+
+.clearFix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@import "sectionLayouts";
+@import "gtas";
+@import 'panels';

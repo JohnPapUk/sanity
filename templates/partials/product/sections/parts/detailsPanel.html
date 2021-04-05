@@ -1,0 +1,19 @@
+
+<div class="panel">
+    <header>
+        <h2>Product Details</h2>
+    </header>
+    <div class="body">
+        <ul style="margin-bottom: 16px;">
+            {{~ it.bullPoints:point }}
+            <li>{{= point}}</li>
+            {{~}}
+            {{? it.pdfName }}
+            <li>
+                <a href="./pdfs/{{= it.pdfName }}">View / Download Brochure<span style="margin: 0 0 0 8px"></span></a>
+
+            </li>
+            {{?}}
+        </ul>
+    </div>
+</div>

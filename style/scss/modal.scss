@@ -1,0 +1,107 @@
+
+
+.dab-modal {
+  z-index: 10;
+  //display:none;
+  margin-top: 40px;
+  position: fixed;
+  width: 100%;
+  overflow: auto;
+  background: transparent;
+}
+
+.modal-content {
+  margin: auto;
+  background-color: #f6f6f6;
+  position: relative;
+  padding: 0;
+  border-radius: 5px;
+  outline: 0;
+  width: 90%;
+
+  .header {
+    border-radius: 5px 5px 0 0;
+    background: #f6f6f6;
+    border-bottom: 4px solid $themeGreen;
+  }
+
+  .content {
+    padding: 15px 12px;
+  }
+
+  .footer {
+    text-align: right;
+    padding:0;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color:#3f3f3f;
+    padding: 5px 10px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8
+}
+
+.animate-opacity {
+  animation: opac 0.8s
+}
+
+@keyframes opac {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@media(min-width: 640px) {
+  .dab-modal{
+    margin-top:60px;
+  }
+  .modal-content {
+    width: 450px;
+
+    .content {
+      padding: 15px 20px;
+    }
+  }
+}
+
+#samplesContainer {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+
+  & > div {
+    border: 1px solid #ccc
+  }
+}
+
+@media (min-width: $bp1280) {
+  .dab-modal{
+    margin-top:100px;
+  }
+  .modal-content {
+    width: 40%;
+  }
+  #samplesContainer {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

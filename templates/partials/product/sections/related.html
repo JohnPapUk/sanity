@@ -1,0 +1,153 @@
+{{? it.productCode === "6000"}}
+<div id="related" class="tab" style="display: none; margin-bottom: 32px;">
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Pedestal Range</h3></div>
+        <div>
+            {{? it.productCode === "6000"}}
+                {{= it.include('products.html', {products: ['6004', '6005', '6006', '6007']} )}}
+            {{?}}
+        </div>
+
+    </section>
+</div>
+{{?? it.productCode === "6004"}}
+<div id="related" class="tab" style="display: none; margin-bottom: 32px;">
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Pedestal Range</h3></div>
+        <div>
+            {{? it.productCode === "6004"}}
+                {{= it.include('products.html', {products: ['6000', '6005', '6006', '6007']} )}}
+            {{?}}
+        </div>
+
+    </section>
+</div>
+{{?? it.productCode === "6005"}}
+<div id="related" class="tab" style="display: none; margin-bottom: 32px;">
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Pedestal Range</h3></div>
+        <div>
+            {{? it.productCode === "6005"}}
+                {{= it.include('products.html', {products: ['6000', '6004', '6006', '6007']} )}}
+            {{?}}
+        </div>
+
+    </section>
+</div>
+{{?? it.productCode === "6006"}}
+<div id="related" class="tab" style="display: none; margin-bottom: 32px;">
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Pedestal Range</h3></div>
+        <div>
+            {{? it.productCode === "6006"}}
+                {{= it.include('products.html', {products: ['6000', '6004', '6005', '6007']} )}}
+            {{?}}
+        </div>
+
+    </section>
+</div>
+{{?? it.productCode === "6007"}}
+<div id="related" class="tab" style="display: none; margin-bottom: 32px;">
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Pedestal Range</h3></div>
+        <div>
+            {{? it.productCode === "6007"}}
+                {{= it.include('products.html', {products: ['6000', '6004', '6005', '6006']} )}}
+            {{?}}
+        </div>
+
+    </section>
+</div>
+{{??}}
+<div id="related" class="tab" style="display: none; margin-bottom: 32px;">
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Decking Range</h3></div>
+        <div>
+            {{? it.productCode === "200" }}
+            {{= it.include('products.html', {products: ['201', '202', '203']} )}}
+            {{?}}
+
+            {{? it.productCode === "201" }}
+            {{= it.include('products.html', {products: ['200', '202', '203']} )}}
+            {{?}}
+
+            {{? it.productCode === "202" }}
+            {{= it.include('products.html', {products: ['200', '201', '203']} )}}
+            {{?}}
+
+            {{? it.productCode === "203" }}
+            {{= it.include('products.html', {products: ['200', '201', '202']} )}}
+            {{?}}
+
+            {{? it.productCode === "204" }}
+            {{= it.include('products.html', {products: ['200', '201', '202', '203']} )}}
+            {{?}}
+
+            {{? it.productCode === "205" }}
+            {{= it.include('products.html', {products: ['200', '201', '202', '203']} )}}
+            {{?}}
+        </div>
+
+    </section>
+
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Cladding Range</h3></div>
+        <div>
+            {{? it.productCode === "200" }}
+            {{= it.include('products.html', {products: ['204']} )}}
+            {{?}}
+
+            {{? it.productCode === "201" }}
+            {{= it.include('products.html', {products: ['204']} )}}
+            {{?}}
+
+            {{? it.productCode === "202" }}
+            {{= it.include('products.html', {products: ['204']} )}}
+            {{?}}
+
+            {{? it.productCode === "203" }}
+            {{= it.include('products.html', {products: ['204']} )}}
+            {{?}}
+
+            {{? it.productCode === "204" }}
+            {{= it.include('products.html', {products: ['204']} )}}
+            {{?}}
+
+            {{? it.productCode === "205" }}
+            {{= it.include('products.html', {products: ['204']} )}}
+            {{?}}
+        </div>
+
+    </section>
+
+    <section class="r2c1c4-1-111">
+        <div><h3 class="ic palette">Fencing Range</h3></div>
+        <div>
+            {{? it.productCode === "200" }}
+            {{= it.include('products.html', {products: ['205']} )}}
+            {{?}}
+
+            {{? it.productCode === "201" }}
+            {{= it.include('products.html', {products: ['205']} )}}
+            {{?}}
+
+            {{? it.productCode === "202" }}
+            {{= it.include('products.html', {products: ['205']} )}}
+            {{?}}
+
+            {{? it.productCode === "203" }}
+            {{= it.include('products.html', {products: ['205']} )}}
+            {{?}}
+
+            {{? it.productCode === "204" }}
+            {{= it.include('products.html', {products: ['205']} )}}
+            {{?}}
+
+            {{? it.productCode === "205" }}
+            {{= it.include('products.html', {products: ['205']} )}}
+            {{?}}
+        </div>
+
+    </section>
+</div>
+{{?}}
